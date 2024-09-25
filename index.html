@@ -5,23 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consult Saksham Homepage</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dummy_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        .fractal-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(45deg, #333 25%, transparent 25%) -50px 0/100px 100px,
+                linear-gradient(135deg, #333 25%, transparent 25%) -50px 0/100px 100px,
+                linear-gradient(45deg, transparent 75%, #111 75%) -50px 0/100px 100px,
+                linear-gradient(135deg, transparent 75%, #111 75%) -50px 0/100px 100px;
+            background-color: #222;
+            animation: animatePlaid 5s linear infinite;
+            z-index: -1;
+        }
+
+        /* Fractal Plaid Animation */
+        @keyframes animatePlaid {
+            0% {
+                background-position: 0 0, 0 0, 0 0, 0 0;
+            }
+
+            100% {
+                background-position: 100px 100px, -100px 100px, 100px -100px, -100px -100px;
+            }
+        }
     </style>
 </head>
 
 <body class="poppins-regular">
 
     <!-- Loading/Landing Screen -- id = load1 -->
-    <canvas class="connecting-dots"></canvas>
-    <main id="load1">
+    <!-- <canvas class="connecting-dots"></canvas> -->
+
+    <main id="load1" class="fractal-background">
 
         <!-- navbar starts -->
         <article id="blahh">
             <section class="navbar poppins-regular">
-                <div class="logo"><img src="logo-no-background.png" alt=""></div>
+                <div class="logo"><img src="S__1_-removebg-preview.png" alt=""></div>
                 <div class="menu_items">
                     <ul>
                         <a href="">
@@ -41,7 +68,7 @@
                         </a>
                     </ul>
                 </div>
-                <div class="lang_selector poppins-regular color_change">
+                <div class="lang_selector poppins-regular ">
                     Get in Touch
                 </div>
             </section>
@@ -54,19 +81,19 @@
             <div class="social_media" id="fixedElement">
                 <p>Connect with me across platforms</p>
                 <article class="logos">
-                    <div><img src="facebook.png" alt=""></div>
-                    <div><img src="insta.png" alt=""></div>
+                    <div><img src="meta.png" alt=""></div>
+                    <div><img src="instagram.png" alt=""></div>
                     <div><img src="linkedin.png" alt=""></div>
                 </article>
             </div>
 
             <div class="banner_lines_arrow">
                 <article class="banner_lines poppins-medium">
-                    <div class="line1">Consult Saksham <br> serves <br>
+                    <div class="line1" style="color: #b5b5b5;">Consult Saksham <br> serves <br>
                         <h3 class="typing-effect-1"></h3>
                         and organizations
                     </div>
-                    <div class="line2">Saksham offers <br>
+                    <div class="line2" style="color: #b5b5b5;">Saksham offers <br>
                         <h3 class="typing-effect-2"></h3>
                         and expertise for old <br> and the new
                     </div>
@@ -88,10 +115,12 @@
     </main>
 
     <!-- Ending of load1 -->
-
-    <!-- load2 -->
+    <main id="load2_filler"></main>
     <main id="load2">
         <section class="load2_banner">
+            <div class="bg"></div>
+            <div class="bg bg2"></div>
+            <div class="bg bg3"></div>
             <div class="rotating-text-wrapper">
                 <h2>Shaping Future Innovators into Tech Leaders. </h2>
                 <h2>Embrace Tomorrow's Technology to Outpace the Competition.</h2>
@@ -106,7 +135,10 @@
     <main id="load3" class="poppins-regular">
         <section class="load3_text">Worried your software solution might miss the mark? Let Saksham guide you to
             minimize risks and prevent costly setbacks.</section>
-        <section class="load3_button poppins-extralight">Let's Talk</section>
+        <article class="load3_section2 glass-effect">
+            <section class="load3_text2">Gain insight into the ins and outs of the industry</section>
+            <section class="load3_button poppins-regular">Let's Talk</section>
+        </article>
     </main>
 
     <main id="load4">
@@ -116,17 +148,19 @@
         </section>
     </main>
     <section class="diff1">
-        <table style="text-align: center; width: 40%;" class="table_diff1">
+        <table style="text-align: center; width: 50%;" class="table_diff1">
             <tr>
-                <th style="border-right: 2px solid gray;border-bottom: 2px solid gray;">Without Consult Saksham</th>
-                <th style="border-left: 2px solid gray;border-bottom: 2px solid gray;">Through Consult Saksham</th>
+                <th style="border-right: 2px solid rgb(231, 100, 100);border-bottom: 2px solid rgb(231, 100, 100);">
+                    Without <span style="color: rgb(190, 190, 190);">Consult Saksham</span></th>
+                <th> Through <span style="color: rgb(190, 190, 190);">Consult Saksham</span></th>
             </tr>
             <tr>
-                <td style="border-right: 2px solid gray;border-top: 2px solid gray;">Struggling to turn innovative
+                <td>Struggling to turn innovative
                     ideas into viable products?
                     Raw product concepts lack direction
                     and fail to resonate with target market.</td>
-                <td style="border-left: 2px solid gray;border-top: 2px solid gray;">Shape market-ready product with
+                <td style="border-left: 2px solid rgb(88, 218, 93);border-top: 2px solid rgb(88, 218, 93);">Shape
+                    market-ready product with
                     Saksham. From initial
                     concept to strategic execution, refine
                     your ideas, ensuring they meet market needs and stand out from the competition.</td>
@@ -137,7 +171,7 @@
 
     <main id="load5">
         <section class="load5_section">
-            <div class="load5_headtxt poppins-extralight">My Experirnce</div>
+            <div class="load5_headtxt">Saksham's Recognition</div>
             <div class="load5_text poppins-medium">
                 Saksham has partnered with leading minds and dominant organizations, fine-tuning solutions that cater to
                 their distinct challenges and goals.
@@ -242,13 +276,27 @@
                 </div>
             </div>
             <div class="statements-container">
-                <div class="statement active poppins-bold">Struggled making the most out of hired resources? Build
+                <!-- <div class="statement active poppins-bold">Struggled making the most out of hired resources? Build
                     Dynamic
                     teams without being exhausted.</div>
                 <div class="statement poppins-bold">Still haunted by your previous collaborations? Contact Saksham and
                     frame realistic requirements today.</div>
                 <div class="statement poppins-bold">Annoyed by latent and unsatisfactory outputs? Streamline your
-                    roadblocks with Saksham's resourceful approach.</div>
+                    roadblocks with Saksham's resourceful approach.</div> -->
+                <div class="rotating-text-wrapper2">
+                    <h2>Struggled making the most out of hired resources? Build
+                        Dynamic
+                        teams without being exhausted. </h2>
+                    <h2>Still haunted by your previous collaborations? Contact Saksham and
+                        frame realistic requirements today.</h2>
+                    <h2>Annoyed by latent and unsatisfactory outputs? Streamline your
+                        roadblocks with Saksham's resourceful approach.
+                    </h2>
+                    <h2>aaaaaaaaaaaaaaaaaaaaaa</h2>
+                    <h2>bbbbbbbbbbbbbbbbbbbb</h2>
+                </div>
+
+
             </div>
             <section class="load6_button poppins-regular">Connect with Saksham</section>
         </section>
@@ -256,7 +304,8 @@
 
     <main id="load7">
         <section class="load7_banner">
-            <div id="filler1">
+            <div class="overlay"></div>
+            <div id="filler1" class="load7_text-container">
                 <p class="filler1_para1 poppins-bold">Invested hefty amounts, hired the best minds, developed a refined
                     tech
                     ecosystem, yet
@@ -277,15 +326,17 @@
     <section class="diff2">
         <table style="text-align: center; width: 50%;" class="table_diff2">
             <tr>
-                <th style="border-right: 2px solid gray;border-bottom: 2px solid gray;">Without Consult Saksham</th>
-                <th style="border-left: 2px solid gray;border-bottom: 2px solid gray;">Through Consult Saksham</th>
+                <th style="border-right: 2px solid rgb(231, 100, 100);border-bottom: 2px solid rgb(231, 100, 100);">
+                    Without <span style="color: rgb(190, 190, 190);">Consult Saksham</span></th>
+                <th> Through <span style="color: rgb(190, 190, 190);">Consult Saksham</span></th>
             </tr>
             <tr>
-                <td style="border-right: 2px solid gray;border-top: 2px solid gray;">Struggling to turn innovative
+                <td>Struggling to turn innovative
                     ideas into viable products?
                     Raw product concepts lack direction
                     and fail to resonate with target market.</td>
-                <td style="border-left: 2px solid gray;border-top: 2px solid gray;">Shape market-ready product with
+                <td style="border-left: 2px solid rgb(88, 218, 93);border-top: 2px solid rgb(88, 218, 93);">Shape
+                    market-ready product with
                     Saksham. From initial
                     concept to strategic execution, refine
                     your ideas, ensuring they meet market needs and stand out from the competition.</td>
@@ -295,6 +346,7 @@
     </section>
 
     <main id="load8">
+        <section class="load8_text">Quote Section</section>
         <section class="load8_section poppins-regular">
             Either Hindered efforts of Napoleon or Steve Job's glorious achievements, both are a testament to the
             polarity of counsel.
@@ -336,17 +388,19 @@
         </section>
     </main>
     <section class="diff3">
-        <table style="text-align: center; width: 60%;" class="table_diff3">
+        <table style="text-align: center; width: 50%;" class="table_diff3">
             <tr>
-                <th style="border-right: 2px solid gray;border-bottom: 2px solid gray;">Without Consult Saksham</th>
-                <th style="border-left: 2px solid gray;border-bottom: 2px solid gray;">Through Consult Saksham</th>
+                <th style="border-right: 2px solid rgb(231, 100, 100);border-bottom: 2px solid rgb(231, 100, 100);">
+                    Without <span style="color: rgb(190, 190, 190);">Consult Saksham</span></th>
+                <th> Through <span style="color: rgb(190, 190, 190);">Consult Saksham</span></th>
             </tr>
             <tr>
-                <td style="border-right: 2px solid gray;border-top: 2px solid gray;">Struggling to turn innovative
+                <td>Struggling to turn innovative
                     ideas into viable products?
                     Raw product concepts lack direction
                     and fail to resonate with target market.</td>
-                <td style="border-left: 2px solid gray;border-top: 2px solid gray;">Shape market-ready product with
+                <td style="border-left: 2px solid rgb(88, 218, 93);border-top: 2px solid rgb(88, 218, 93);">Shape
+                    market-ready product with
                     Saksham. From initial
                     concept to strategic execution, refine
                     your ideas, ensuring they meet market needs and stand out from the competition.</td>
@@ -362,7 +416,8 @@
 
     <main id="load12">
         <section class="load9_sec2">
-            <h1 class="core_competencies poppins-medium">Benefits of collaborating with saksham</h1>
+            <h1 class="core_competencies poppins-medium">Benefits of collaborating with <span style="color: #0015ff;">
+                    Saksham</span></h1>
             <div class="load9_features">
                 <div class="feature">
                     <div class="image">
@@ -510,15 +565,17 @@
     <section class="diff4">
         <table style="text-align: center; width: 50%;" class="table_diff4">
             <tr>
-                <th style="border-right: 2px solid gray;border-bottom: 2px solid gray;">Without Consult Saksham</th>
-                <th style="border-left: 2px solid gray;border-bottom: 2px solid gray;">Through Consult Saksham</th>
+                <th style="border-right: 2px solid rgb(231, 100, 100);border-bottom: 2px solid rgb(231, 100, 100);">
+                    Without <span style="color: rgb(190, 190, 190);">Consult Saksham</span></th>
+                <th> Through <span style="color: rgb(190, 190, 190);">Consult Saksham</span></th>
             </tr>
             <tr>
-                <td style="border-right: 2px solid gray;border-top: 2px solid gray;">Struggling to turn innovative
+                <td>Struggling to turn innovative
                     ideas into viable products?
                     Raw product concepts lack direction
                     and fail to resonate with target market.</td>
-                <td style="border-left: 2px solid gray;border-top: 2px solid gray;">Shape market-ready product with
+                <td style="border-left: 2px solid rgb(88, 218, 93);border-top: 2px solid rgb(88, 218, 93);">Shape
+                    market-ready product with
                     Saksham. From initial
                     concept to strategic execution, refine
                     your ideas, ensuring they meet market needs and stand out from the competition.</td>
@@ -528,300 +585,9 @@
     </section>
 
     <main id="load19_heading" class="poppins-bold">
-        <section class="ban_sec">
-            <div class="container19">
-                <div class="ban_img">
-                    <img src="Z4.jpg" alt="banner">
-                    <div class="ban_text">
-                        <strong>
-                            <span class="poppins-medium" style="color: rgb(179, 179, 179);">Meeting current</span><br>
-                            needs now
-                        </strong>
-                        <p>Discover what industry leaders and peers are saying about Consult Saksham—hear their
-                            <br>experiences and insights on how Saksham's expertise has transformed their journey.
-                        </p>
-                        <a href="#load20">Skip Reviews</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+
     </main>
-    <!-- <main id="load19">
-        <section class="load19_section">
-            <article class="load19_article">
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <p>Without Consult Saksham</p>
-                            <h2>With Saksham</h2>
-                        </div>
-                        <div class="card-back">
-                            <p>Choosing the wrong model leads to poor performance and degraded management, derailing the
-                                project's progress.</p>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <p>Through Consult Saksham</p>
-                            <h2>With Saksham</h2>
-                        </div>
-                        <div class="card-back">
-
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-            <article class="load19_article">
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <p>Without Consult Saksham</p>
-                            <h2>With Saksham</h2>
-                        </div>
-                        <div class="card-back">
-                            <p>Choosing the wrong model leads to poor performance and degraded management, derailing the
-                                project's progress.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <p>Through Consult Saksham</p>
-                            <h2>With Saksham</h2>
-                        </div>
-                        <div class="card-back">
-
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-            <article class="load19_article">
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <p>Without Consult Saksham</p>
-                            <h2>With Saksham</h2>
-                        </div>
-                        <div class="card-back">
-                            <p>Choosing the wrong model leads to poor performance and degraded management, derailing the
-                                project's progress.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <p>Through Consult Saksham</p>
-                            <h2>With Saksham</h2>
-                        </div>
-                        <div class="card-back">
-
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-            <article class="load19_article">
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <p>Without Consult Saksham</p>
-                            <h2>With Saksham</h2>
-                        </div>
-                        <div class="card-back">
-                            <p>Choosing the wrong model leads to poor performance and degraded management, derailing the
-                                project's progress.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <p>Through Consult Saksham</p>
-                            <h2>With Saksham</h2>
-                        </div>
-                        <div class="card-back">
-
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-            <article class="load19_article">
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <p>Without Consult Saksham</p>
-                            <h2>With Saksham</h2>
-                        </div>
-                        <div class="card-back">
-                            <p>Choosing the wrong model leads to poor performance and degraded management, derailing the
-                                project's progress.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <p>Through Consult Saksham</p>
-                            <h2>With Saksham</h2>
-                        </div>
-                        <div class="card-back">
-
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-        </section>
-        <section class="load19_section">
-            <article class="load19_article">
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <p>Without Consult Saksham</p>
-                            <h2>With Saksham</h2>
-                        </div>
-                        <div class="card-back">
-                            <p>Choosing the wrong model leads to poor performance and degraded management, derailing the
-                                project's progress.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <p>Thorough Consult Saksham</p>
-                            <h2>With Saksham</h2>
-                        </div>
-                        <div class="card-back">
-
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-            <article class="load19_article">
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <p>Without Consult Saksham</p>
-                            <h2>With Saksham</h2>
-                        </div>
-                        <div class="card-back">
-                            <p>Choosing the wrong model leads to poor performance and degraded management, derailing the
-                                project's progress.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <p>Thorough Consult Saksham</p>
-                            <h2>With Saksham</h2>
-                        </div>
-                        <div class="card-back">
-
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-            <article class="load19_article">
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <p>Without Consult Saksham</p>
-                            <h2>With Saksham</h2>
-                        </div>
-                        <div class="card-back">
-                            <p>Choosing the wrong model leads to poor performance and degraded management, derailing the
-                                project's progress.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <p>Thorough Consult Saksham</p>
-                            <h2>With Saksham</h2>
-                        </div>
-                        <div class="card-back">
-
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-            <article class="load19_article">
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <p>Without Consult Saksham</p>
-                            <h2>With Saksham</h2>
-                        </div>
-                        <div class="card-back">
-                            <p>Choosing the wrong model leads to poor performance and degraded management, derailing the
-                                project's progress.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <p>Thorough Consult Saksham</p>
-                            <h2>With Saksham</h2>
-                        </div>
-                        <div class="card-back">
-
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-            <article class="load19_article">
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <p>Without Consult Saksham</p>
-                            <h2>With Saksham</h2>
-                        </div>
-                        <div class="card-back">
-                            <p>Choosing the wrong model leads to poor performance and degraded management, derailing the
-                                project's progress.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <p>Thorough Consult Saksham</p>
-                            <h2>With Saksham</h2>
-                        </div>
-                        <div class="card-back">
-
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-        </section>
-    </main> -->
 
 
     <div class="section">
@@ -829,6 +595,7 @@
             <div class="content-wrapper">
                 <div class="content content-1">
                     <div class="meta">
+                        <p style="color: #0015ff; font-size: 1.2em;">The Review</p>
                         <h2 class="headline">
                             "Determined and<span class="text-highlight"> Result driven"</span>
                         </h2>
@@ -842,6 +609,7 @@
                 </div>
                 <div class="content content-2">
                     <div class="meta">
+                        <p style="color: #0015ff; font-size: 1.2em;">The Review</p>
                         <h2 class="headline">
                             "Embark on Your
                             <span class="text-highlight">Legendary Journey"</span>
@@ -856,6 +624,7 @@
                 <div class="content content-3">
 
                     <div class="meta">
+                        <p style="color: #0015ff; font-size: 1.2em;">The Review</p>
                         <h2 class="headline">
                             "Master the
                             <span class="text-highlight">Art of Magic"</span>
@@ -870,6 +639,7 @@
                 <div class="content content-4">
 
                     <div class="meta">
+                        <p style="color: #0015ff; font-size: 1.2em;">The Review</p>
                         <h2 class="headline">
                             "Rise as the <span class="text-highlight">Champion"</span>
                         </h2>
@@ -883,86 +653,85 @@
             </div>
             <div class="visual">
                 <div class="card-wrapper">
+                    <p style="color: #0015ff; font-size: 2em;" class="poppins-medium">The Reviewer</p>
                     <div class="card card-1">
-                        <div style="padding: 5px 7px; "><img width="30" height="30"
-                                src="https://img.icons8.com/parakeet-line/48/test-account.png" alt="test-account" />
-                            <div class="load20" style="color: black; padding-left: 5px; ">Andrew Myers</div>
+                        <div class="review_radius">
+                            <div style="padding: 5px 7px; "><img width="30" height="30"
+                                    src="https://img.icons8.com/parakeet-line/48/test-account.png" alt="test-account" />
+                                <div class="load20" style="color: black; padding-left: 5px; ">Andrew Myers</div>
+                            </div>
+                            <div style="padding: 5px 7px; "><img width="30" height="30"
+                                    src="https://img.icons8.com/ios/50/building.png" alt="building" />
+                                <div class="load20" style="color: black; padding-left: 5px; ">Software</div>
+                            </div>
+                            <div style="padding: 5px 7px; "><img width="30" height="30"
+                                    src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" />
+                                <div class="load20" style="color: black; padding-left: 5px; ">London, England</div>
+                            </div>
+                            <div style="padding: 5px 7px; "><img width="30" height="30"
+                                    src="https://img.icons8.com/ios/50/plus-1-week.png" alt="plus-1-week" />
+                                <div class="load20" style="color: black; padding-left: 5px; ">2016 - Present</div>
+                            </div>
                         </div>
-                        <div style="padding: 5px 7px; "><img width="30" height="30"
-                                src="https://img.icons8.com/ios/50/building.png" alt="building" />
-                            <div class="load20" style="color: black; padding-left: 5px; ">Software</div>
-                        </div>
-                        <div style="padding: 5px 7px; "><img width="30" height="30"
-                                src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" />
-                            <div class="load20" style="color: black; padding-left: 5px; ">London, England</div>
-                        </div>
-                        <div style="padding: 5px 7px; "><img width="30" height="30"
-                                src="https://img.icons8.com/ios/50/plus-1-week.png" alt="plus-1-week" />
-                            <div class="load20" style="color: black; padding-left: 5px; ">2016 - Present</div>
-                        </div>
-
-
                     </div>
                     <div class="card card-2">
-                        <div style="padding: 5px 7px; "><img width="30" height="30"
-                                src="https://img.icons8.com/parakeet-line/48/test-account.png" alt="test-account" />
-                            <div class="load20" style="color: black; padding-left: 5px; ">Andrew Myers</div>
-                        </div>
-                        <div style="padding: 5px 7px; "><img width="30" height="30"
-                                src="https://img.icons8.com/ios/50/building.png" alt="building" />
-                            <div class="load20" style="color: black; padding-left: 5px; ">Software</div>
-                        </div>
-                        <div style="padding: 5px 7px; "><img width="30" height="30"
-                                src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" />
-                            <div class="load20" style="color: black; padding-left: 5px; ">London, England</div>
-                        </div>
-                        <div style="padding: 5px 7px; "><img width="30" height="30"
-                                src="https://img.icons8.com/ios/50/plus-1-week.png" alt="plus-1-week" />
-                            <div class="load20" style="color: black; padding-left: 5px; ">2016 - Present</div>
+                        <div class="review_radius">
+                            <div style="padding: 5px 7px; "><img width="30" height="30"
+                                    src="https://img.icons8.com/parakeet-line/48/test-account.png" alt="test-account" />
+                                <div class="load20" style="color: black; padding-left: 5px; ">Andrew Myers</div>
+                            </div>
+                            <div style="padding: 5px 7px; "><img width="30" height="30"
+                                    src="https://img.icons8.com/ios/50/building.png" alt="building" />
+                                <div class="load20" style="color: black; padding-left: 5px; ">Software</div>
+                            </div>
+                            <div style="padding: 5px 7px; "><img width="30" height="30"
+                                    src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" />
+                                <div class="load20" style="color: black; padding-left: 5px; ">London, England</div>
+                            </div>
+                            <div style="padding: 5px 7px; "><img width="30" height="30"
+                                    src="https://img.icons8.com/ios/50/plus-1-week.png" alt="plus-1-week" />
+                                <div class="load20" style="color: black; padding-left: 5px; ">2016 - Present</div>
+                            </div>
                         </div>
                     </div>
                     <div class="card card-3">
-                        <div style="padding: 5px 7px; "><img width="30" height="30"
-                                src="https://img.icons8.com/parakeet-line/48/test-account.png" alt="test-account" />
-                            <div class="load20" style="color: black; padding-left: 5px; ">Andrew Myers</div>
-                        </div>
-                        <div style="padding: 5px 7px; "><img width="30" height="30"
-                                src="https://img.icons8.com/ios/50/building.png" alt="building" />
-                            <div class="load20" style="color: black; padding-left: 5px; ">Software</div>
-                        </div>
-                        <div style="padding: 5px 7px; "><img width="30" height="30"
-                                src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" />
-                            <div class="load20" style="color: black; padding-left: 5px; ">London, England</div>
-                        </div>
-                        <div style="padding: 5px 7px; "><img width="30" height="30"
-                                src="https://img.icons8.com/ios/50/plus-1-week.png" alt="plus-1-week" />
-                            <div class="load20" style="color: black; padding-left: 5px; ">2016 - Present</div>
+                        <div class="review_radius">
+                            <div style="padding: 5px 7px; "><img width="30" height="30"
+                                    src="https://img.icons8.com/parakeet-line/48/test-account.png" alt="test-account" />
+                                <div class="load20" style="color: black; padding-left: 5px; ">Andrew Myers</div>
+                            </div>
+                            <div style="padding: 5px 7px; "><img width="30" height="30"
+                                    src="https://img.icons8.com/ios/50/building.png" alt="building" />
+                                <div class="load20" style="color: black; padding-left: 5px; ">Software</div>
+                            </div>
+                            <div style="padding: 5px 7px; "><img width="30" height="30"
+                                    src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" />
+                                <div class="load20" style="color: black; padding-left: 5px; ">London, England</div>
+                            </div>
+                            <div style="padding: 5px 7px; "><img width="30" height="30"
+                                    src="https://img.icons8.com/ios/50/plus-1-week.png" alt="plus-1-week" />
+                                <div class="load20" style="color: black; padding-left: 5px; ">2016 - Present</div>
+                            </div>
                         </div>
                     </div>
                     <div class="card card-4">
-                        <div style="padding: 5px 7px; "><img width="30" height="30"
-                                src="https://img.icons8.com/parakeet-line/48/test-account.png" alt="test-account" />
-                            <div class="load20"
-                                style="color: black; padding-left: 5px; text-shadow: 0 10px 10px rgba(30, 30, 30, 0.564); ">
-                                Andrew Myers</div>
-                        </div>
-                        <div style="padding: 5px 7px; "><img width="30" height="30"
-                                src="https://img.icons8.com/ios/50/building.png" alt="building" />
-                            <div class="load20"
-                                style="color: black; padding-left: 5px; text-shadow: 0 10px 10px rgba(30, 30, 30, 0.564); ">
-                                Software</div>
-                        </div>
-                        <div style="padding: 5px 7px; "><img width="30" height="30"
-                                src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" />
-                            <div class="load20"
-                                style="color: black; padding-left: 5px; text-shadow: 0 10px 10px rgba(30, 30, 30, 0.564); ">
-                                London, England</div>
-                        </div>
-                        <div style="padding: 5px 7px; "><img width="30" height="30"
-                                src="https://img.icons8.com/ios/50/plus-1-week.png" alt="plus-1-week" />
-                            <div class="load20"
-                                style="color: black; padding-left: 5px; text-shadow: 0 10px 10px rgba(30, 30, 30, 0.564); ">
-                                2016 - Present</div>
+                        <div class="review_radius">
+                            <div style="padding: 5px 7px; "><img width="30" height="30"
+                                    src="https://img.icons8.com/parakeet-line/48/test-account.png" alt="test-account" />
+                                <div class="load20" style="color: black; padding-left: 5px; ">Andrew Myers</div>
+                            </div>
+                            <div style="padding: 5px 7px; "><img width="30" height="30"
+                                    src="https://img.icons8.com/ios/50/building.png" alt="building" />
+                                <div class="load20" style="color: black; padding-left: 5px; ">Software</div>
+                            </div>
+                            <div style="padding: 5px 7px; "><img width="30" height="30"
+                                    src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" />
+                                <div class="load20" style="color: black; padding-left: 5px; ">London, England</div>
+                            </div>
+                            <div style="padding: 5px 7px; "><img width="30" height="30"
+                                    src="https://img.icons8.com/ios/50/plus-1-week.png" alt="plus-1-week" />
+                                <div class="load20" style="color: black; padding-left: 5px; ">2016 - Present</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -971,103 +740,118 @@
     </div>
 
     <main id="load20">
-        <footer>
-            <div class="footer-container">
-                <!-- About Section -->
-                <div class="footer-section about" style="padding-left: 10px;">
-                    <h2>About Consult Saksham</h2>
-                    <p>Consult Saksham specializes in providing top-notch technology advisory services to help
-                        organizations and individuals harness the power of tech for innovation and growth.</p>
-                    <a href="/about" class="read-more">Learn more</a>
-                </div>
+        <footer class="footer-section">
+            <div class="footer_container">
 
-                <!-- Quick Links -->
-                <div class="footer-section links">
-                    <h2>Quick Links</h2>
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/services">About me</a></li>
-                        <li><a href="/blog">What I do</a></li>
-                        <li><a href="/contact">Success Stories</a></li>
-                        <li><a href="/faq">Resources</a></li>
-                        <li><a href="/testimonials">FAQs</a></li>
-                        <li><a href="/case-studies">Contact Saksham</a></li>
-                    </ul>
-                </div>
+                <div class="footer_row">
 
-                <!-- Services Links -->
-                <div class="footer-section services">
-                    <h2>Offerings</h2>
-                    <ul>
-                        <li><a href="/services/tech-advisory">IT & Tech Advisory</a></li>
-                        <li><a href="/services/product-concept">Product Conceptualization</a></li>
-                        <li><a href="/services/team-building">Technical Team Building</a></li>
-                        <li><a href="/services/rfp-rfq">RFP/RFQ Assistance</a></li>
-                        <li><a href="/services/ai-ml-ar-vr">AI/ML/AR/VR Integration</a></li>
-                        <li><a href="/services/research-planning">Tech Research & Planning</a></li>
-                    </ul>
-                </div>
+                    <div class="single-cta">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="cta-text">
+                            <h4>Find us</h4>
+                            <span>1010 Avenue, sw 54321, chandigarh</span>
+                        </div>
+                    </div>
 
-                <!-- Contact Information -->
-                <div class="footer-section contact">
-                    <h2>Contact Saksham</h2>
-                    <p>Email: <a href="mailto:info@consultsaksham.com">saksham.agarwal@consultsaksham.com</a></p>
-                    <p>Phone: <a href="tel:+1234567890">+91 9873212555</a></p>
-                    <p>Business Hours: Mon-Fri, 9 AM - 6 PM</p>
-                </div>
 
-                <!-- Newsletter Subscription -->
-                <div class="footer-section newsletter" style="padding-left: 10px;">
-                    <h2>Newsletter</h2>
-                    <p>Subscribe to receive updates and expert insights straight to your inbox.</p>
-                    <form>
-                        <input type="email" placeholder="Your email" required>
-                        <button type="submit">Subscribe</button>
-                    </form>
-                </div>
+                    <div class="single-cta">
+                        <i class="fas fa-phone"></i>
+                        <div class="cta-text">
+                            <h4>Call us</h4>
+                            <span>9876543210 0</span>
+                        </div>
+                    </div>
 
-                <!-- Social Media Links -->
-                <div class="footer-section social">
-                    <h2>Follow Saksham</h2>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+
+                    <div class="single-cta">
+                        <i class="far fa-envelope-open"></i>
+                        <div class="cta-text">
+                            <h4>Mail us</h4>
+                            <span>mail@info.com</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Blog / Recent Articles -->
-                <div class="footer-section blog">
-                    <h2>Latest Articles</h2>
-                    <ul>
-                        <li><a href="/blog/post1">How to choose the right tech stack for your business</a></li>
-                        <li><a href="/blog/post2">Best practices for RFP drafting in 2024</a></li>
-                        <li><a href="/blog/post3">Tech trends shaping the future of AI</a></li>
-                    </ul>
-                </div>
+                <div class="footer-content pt-5 pb-5">
+                    <div class="footer_row">
 
-                <!-- Client Logos -->
-                <div class="footer-section clients">
-                    <h2>Trusted By</h2>
-                    <div class="client-logos">
-                        <img src="client1.png" alt="Client 1">
-                        <img src="client2.png" alt="Client 2">
-                        <img src="client3.png" alt="Client 3">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"><img src="" class="img-fluid" alt="logo"></a>
+                            </div>
+                            <div class="footer-text">
+                                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor
+                                    incididuntut consec tetur adipisicing
+                                    elit,Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                            </div>
+                        </div>
+
+
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">about</a></li>
+                                <li><a href="#">services</a></li>
+                                <li><a href="#">portfolio</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Our Services</a></li>
+                                <li><a href="#">Expert Team</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Latest News</a></li>
+                            </ul>
+                        </div>
+
+
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email Address">
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+            </div>
+            <div class="copyright-area">
 
-                <!-- Legal Links -->
-                <div class="footer-section legal" style="padding-left: 10px;">
-                    <a href="/privacy-policy">Privacy Policy</a> |
-                    <a href="/terms-conditions">Terms & Conditions</a> |
-                    <a href="/disclaimer">Disclaimer</a>
+                <div class="footer_row row_bottom">
+
+                    <div class="copyright-text">
+                        <p>Copyright &copy; 2018, All Right Reserved <a href="https://codepen.io/anupkumar92/">Anup</a>
+                        </p>
+                    </div>
+
+
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Policy</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+
                 </div>
 
-                <!-- Copyright -->
-                <div class="footer-section copyright">
-                    <p>&copy; 2024 Consult Saksham. All Rights Reserved.</p>
-                </div>
             </div>
         </footer>
     </main>
