@@ -1,6 +1,5 @@
 
 // typewriter effect
-
 const wordsForFirstH1 = [
     "Decision Makers",
     "CXOs",
@@ -68,17 +67,12 @@ const wordsForSecondH1 = [
 
 const typingSpeed = 150; // time between each character in milliseconds
 const delayBeforeRestart = 1000; // delay before the text restarts typing
-const colors = ["white"];
 
 let firstCompleted = false;
 let secondCompleted = false;
 
 function typeWriter(element, wordsArray, wordIndex, charIndex, callback) {
     const currentWord = wordsArray[wordIndex];
-
-    // Set color based on word index cycle
-    const colorIndex = wordIndex % colors.length;
-    element.style.color = colors[colorIndex];
 
     if (charIndex < currentWord.length) {
         element.innerHTML += currentWord.charAt(charIndex);
@@ -89,7 +83,6 @@ function typeWriter(element, wordsArray, wordIndex, charIndex, callback) {
 }
 
 function onWordComplete() {
-    // Check if both elements have completed typing
     if (firstCompleted && secondCompleted) {
         setTimeout(() => {
             firstCompleted = false;
