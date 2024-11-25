@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload Validation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <form id="form-id">
+        <input type="file" id="original-file-type" accept=".jpg, .jpeg, .png, .doc, .docx, .pdf" />
+    </form>
+
+    <script type="text/javascript">
+        $(function () {
+            $("#original-file-type").on('change', function (event) {
+                var file = event.target.files[0];
+
+                // Modify file name by replacing spaces with underscores
+                var fileName = file.name.replace(/\s+/g, '_');
+                console.log("Modified file name: " + fileName);
+
+
+                // Allowed file types
+                var allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+
+                // Check for allowed file types
+                if (!allowedTypes.includes(file.type)) {
+                    alert("Only JPG, PNG, DOC, DOCX, and PDF files are allowed");
+                    $("#form-id").get(0).reset(); // Reset the form to clear the file input
+                    return;
+                }
+
+                // Additional validation for image file types (JPG/PNG)
+                if (file.type.startsWith('image/')) {
+                    var fileReader = new FileReader();
+                    fileReader.onload = function (e) {
+                        var int32View = new Uint8Array(e.target.result);
+
+                        // Check magic number for JPG (0xFF 0xD8) or PNG (0x89 0x50 0x4E 0x47)
+                        if ((int32View[0] == 0xFF && int32View[1] == 0xD8) ||
+                            (int32View[0] == 0x89 && int32View[1] == 0x50 && int32View[2] == 0x4E && int32View[3] == 0x47)) {
+                            alert("File is valid!");
+                        } else {
+                            alert("Only valid JPG, PNG images are allowed");
+                            $("#form-id").get(0).reset(); // Reset the form to clear the file input
+                            return;
+                        }
+                    };
+                    fileReader.readAsArrayBuffer(file);
+                } else {
+                    // Non-image files like DOC, DOCX, and PDF will pass this check automatically
+                    alert("File is valid!");
+                }
+
+                // Set the file name to the modified name in the input field
+                var dataTransfer = new DataTransfer();
+                dataTransfer.items.add(new File([file], fileName, { type: file.type }));
+                $("#original-file-type").prop('files', dataTransfer.files);
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+
+cat ip-logs.txt | awk '{print $1}' | sort | uniq -c | sort -nr

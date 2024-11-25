@@ -1,0 +1,50 @@
+.gradient_bg_container {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: -1;
+/* Lower than content */
+pointer-events: none;
+/* Ensures it doesn't block any interactions */
+}
+
+.gradient_bg {
+position: relative;
+/* Make it fixed to stay in the background */
+transform: translate(-50%, -50%);
+width: 450px;
+height: 500px;
+filter: blur(50px);
+background-image: linear-gradient(#4ddc9e, #5b37eb, #f1307e);
+animation: rotate_now 10s cubic-bezier(0.8, 0.2, 0.2, 0.8) alternate infinite;
+border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+z-index: -1;
+/* Keep it behind everything */
+}
+
+@keyframes rotate_now {
+0% {
+transform: rotate(0deg);
+}
+
+100% {
+transform: rotate(360deg);
+}
+}
+
+
+<!-- <canvas class="connecting-dots"></canvas> -->
+<div id="load1">
+    <!-- Gradient Background behind the content -->
+    <div class="gradient_bg_container">
+        <div class="gradient_bg"></div>
+    </div>
+
+    <!-- Content in the foreground -->
+    <article id="blahh">
+        <section class="navbar poppins-regular">
+            <div class="logo"><img src="S__1_-removebg-preview.png" alt=""></div>
+            <div class="menu_items">
+                <ul>
+                    <a href="">
